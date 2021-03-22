@@ -77,6 +77,8 @@ pub mod ser;
 #[cfg(feature = "std")]
 pub mod std_impl;
 pub mod util;
+#[cfg(feature = "uuid")]
+pub mod uuid_impl;
 #[cfg(feature = "validation")]
 pub mod validation;
 

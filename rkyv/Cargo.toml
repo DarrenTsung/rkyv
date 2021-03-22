@@ -19,6 +19,7 @@ memoffset = "0.6"
 ptr_meta = { version = "0.1.1" }
 rkyv_derive = { version = "=0.4.0", path = "../rkyv_derive" }
 seahash = { version = "4.0", optional = true }
+uuid = { version = "0.8", optional = true }
 
 [features]
 default = ["std"]
@@ -27,6 +28,7 @@ size_64 = []
 std = ["seahash"]
 strict = ["rkyv_derive/strict"]
 validation = ["bytecheck", "std"]
+uuid-archive = ["uuid"]
 
 [package.metadata.docs.rs]
-features = ["validation"]
+features = ["validation", "uuid-archive"]
